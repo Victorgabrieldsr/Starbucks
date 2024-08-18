@@ -1,0 +1,258 @@
+@font-face {
+    font-family: stb-regular;
+    src: url(font/FreightSansProMedium-Regular.ttf);
+}
+
+@font-face {
+    font-family: stb-bold;
+    src: url(font/FreightSansProSemibold-Regular.ttf);
+}
+
+@font-face {
+    font-family: stb-black;
+    src: url(font/FreightSansProBlack-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
+nav {
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: stb-regular;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+#ul-img {
+    width: 40%;
+}
+
+#ul-img img {
+    width: 7rem;
+}
+
+#ul-itens {
+    width: 40%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+#ul-itens li {
+    list-style: none;
+    font-size: 1.5rem;
+    margin-right: 3rem;
+    color: black;
+}
+
+#ul-itens a{
+    color: black;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+#ul-itens a:hover{
+    color: #00643c;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    background-color: white;
+}
+
+#first-box {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 30%;
+}
+
+#first-box .texto-box {
+    font-size: 5rem;
+    font-family: stb-regular;
+    margin-top: -1.5rem;
+}
+
+#first-box .aspas {
+    font-size: 4rem;
+    font-family: sans-serif;
+}
+
+.starbucks {
+    font-size: 6rem;
+    font-family: stb-black;
+    color: #00643c;
+}
+
+#first-box p {
+    font-size: 1rem;
+    font-family: stb-regular;
+    max-width: 75%;
+}
+
+#button-learn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    background-color: #00643c;
+    font-family: stb-bold;
+    width: 15%;
+    font-size: 1.2rem;
+    padding: 0.7rem;
+    border-radius: 32px;
+    margin-top: 2rem;
+    transition: 0.5s ease;
+}
+
+#button-learn:hover{
+    background-color: #038652;
+}
+
+#second-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 50%;
+}
+
+#circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 40%;
+    height: 80%;
+    bottom: 0;
+    right: 0;
+    margin-top: 5rem;
+    border-top-left-radius: 50rem;
+    background-color: rgb(36, 121, 40);
+}
+
+#circle img {
+    width: 400px;
+}
+
+.rotateCircleImg{
+    animation: rotateCircleImg 1.5s ease-in-out;
+}
+
+.backRotateCircleImg {
+    animation: backRotateCircleImg 1.5s ease-in-out;
+}
+
+@keyframes moveUpAndDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes rotateCircleImg {
+    0%{
+        rotate: 0deg; 
+        transform: translateY(0);
+        transform: translateX(0);
+    }
+    100%{
+        rotate: -90deg;
+        transform: translateY(100px);
+        transform: translateX(-600px);
+    }
+}
+
+@keyframes backRotateCircleImg {
+    0%{
+        rotate: 90deg;
+        margin-right: -90rem;
+        margin-top: -50rem;
+        transform: translateZ(100px);
+        transform: translateX(100px);
+    }
+    100%{
+        margin-top: 0rem;
+        margin-right: 0rem;
+        rotate: 0deg;
+        transform: translateY(0px);
+        transform: translateX(0px);
+    }
+
+}
+
+
+#column-coffee{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 12%;
+}
+#column-coffee img{
+    width: 50px;
+    margin-right: 2rem;
+    transition: 0.3s ease;
+}
+
+#column-coffee img:hover{
+    cursor: pointer;
+    transform: translateY(-10px);
+}
+
+#animate_img2{
+    display: none;
+}
+
+#box-starbucks{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-top: -2rem;
+}
+
+#box-one{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+    margin-top: 2rem;
+}
+
+.animate-moveUpAndDown{
+    animation: moveUpAndDown 2s ease-in-out;
+} 
+
+
